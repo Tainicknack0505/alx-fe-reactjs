@@ -7,6 +7,7 @@ const Navbar = () => {
         display: "flex",
         justifyContent: "right",
         width: "100%",
+        backgroundColor: "#333",
       }}
     >
       <ul
