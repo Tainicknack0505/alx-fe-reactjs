@@ -1,18 +1,20 @@
 // src/components/formikForm.js
-import React from 'react';
-import { Formik, Form, Field, ErrorMessage } from 'formik';
-import * as Yup from 'yup';
+import React from "react";
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import * as Yup from "yup";
 
 const validationSchema = Yup.object({
-  username: Yup.string().required('Username is required'),
-  email: Yup.string().email('Invalid email address').required('Email is required'),
-  password: Yup.string().required('Password is required'),
+  username: Yup.string().required("Username is required"),
+  email: Yup.string()
+    .email("Invalid email address")
+    .required("Email is required"),
+  password: Yup.string().required("Password is required"),
 });
 
 const formikForm = () => {
   return (
     <Formik
-      initialValues={{ username: '', email: '', password: '' }}
+      initialValues={{ username: "", email: "", password: "" }}
       validationSchema={validationSchema}
       onSubmit={(values) => {
         console.log(values);
