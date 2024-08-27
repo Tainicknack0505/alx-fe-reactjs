@@ -36,26 +36,26 @@
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useParams } from "react-router-dom";
-import Home from "./components/Home";
+// import Home from "./components/Home";
 import Profile from "./components/Profile";
-import Login from "./components/Login";
+// import Login from "./components/Login";
 import UserProfile from "./components/UserProfile";
 import ProtectedRoute from "./components/ProtectedRoute";
 
 const isAuthenticated = false;
 
 function BlogPost() {
-  const { postId } = useParams();
-  return <div>Blog Post ID: {postId}</div>;
+  const { id } = useParams();
+  return <div>Blog Post ID: {id}</div>;
 }
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home />} />
+        {/* <Route path="/" element={<Home />} /> */}
         <Route path="/profile/*" element={<Profile />} />
-        <Route path="/login" element={<Login />} />
+        {/* <Route path="/login" element={<Login />} /> */}
         <Route path="/user/:userId" element={<UserProfile />} />
         <Route
           path="/profile/*"
@@ -66,7 +66,7 @@ function App() {
             />
           }
         />
-        <Route path="/blog/:postId" element={<BlogPost />} />
+        <Route path="/blog/:id" element={<BlogPost />} />
       </Routes>
     </Router>
   );
