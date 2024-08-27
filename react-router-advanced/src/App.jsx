@@ -42,8 +42,6 @@ import Profile from "./components/Profile";
 import UserProfile from "./components/UserProfile";
 import ProtectedRoute from "./components/ProtectedRoute";
 
-const isAuthenticated = false;
-
 function BlogPost() {
   const { id } = useParams();
   return <div>Blog Post ID: {id}</div>;
@@ -57,14 +55,18 @@ function App() {
         <Route path="/profile/*" element={<Profile />} />
         {/* <Route path="/login" element={<Login />} /> */}
         <Route path="/user/:userId" element={<UserProfile />} />
-        <Route
+        {/* <Route
           path="/profile/*"
           element={
             <ProtectedRoute
               isAuthenticated={isAuthenticated}
-              element={Profile}
+              element={Profile }
             />
           }
+        /> */}
+        <Route
+          path="/profile/*"
+          element={<ProtectedRoute element={<Profile />} />}
         />
         <Route path="/blog/:id" element={<BlogPost />} />
       </Routes>
