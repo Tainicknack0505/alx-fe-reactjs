@@ -35,14 +35,19 @@
 // export default App
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import Home from "./components/Home";
 import Profile from "./components/Profile";
 import Login from "./components/Login";
 import UserProfile from "./components/UserProfile";
 import ProtectedRoute from "./components/ProtectedRoute";
 
-const isAuthenticated = false; 
+const isAuthenticated = false;
 
+function BlogPost() {
+  const { postId } = useParams();
+  return <div>Blog Post ID: {postId}</div>;
+}
 
 function App() {
   return (
@@ -52,7 +57,16 @@ function App() {
         <Route path="/profile/*" element={<Profile />} />
         <Route path="/login" element={<Login />} />
         <Route path="/user/:userId" element={<UserProfile />} />
-        <Route path="/profile/*" element={<ProtectedRoute isAuthenticated={isAuthenticated} element={Profile} />} />
+        <Route
+          path="/profile/*"
+          element={
+            <ProtectedRoute
+              isAuthenticated={isAuthenticated}
+              element={Profile}
+            />
+          }
+        />
+        <Route path="/blog/:postId" element={<BlogPost />} />
       </Routes>
     </Router>
   );
