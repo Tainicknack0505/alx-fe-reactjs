@@ -1,6 +1,6 @@
 // src/__tests__/TodoList.test.js
 import React from 'react';
-import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+import { render, screen, fireEvent, waitForElementToBeRemoved } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import TodoList from '../TodoList';
 
@@ -29,7 +29,5 @@ test('deletes a todo', async () => {
     const deleteButtons = screen.getAllByText('Delete');
     fireEvent.click(deleteButtons[0]); // Click the first delete button
     
-    await waitFor(() => {
-      expect(screen.queryByText('Learn React')).not.toBeInTheDocument();
-    });
+    await waitForElementToBeRemoved(() => screen.queryByText('Learn React'));
 });
