@@ -13,7 +13,6 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "jest",
-    "text": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -35,10 +34,15 @@
     ]
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.25.4",
     "@babel/preset-react": "^7.24.7",
     "@testing-library/jest-dom": "^6.5.0",
     "@testing-library/react": "^16.0.0",
-    "babel-cli": "^6.26.0",
     "jest": "^27.5.1"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    }
   }
 }
