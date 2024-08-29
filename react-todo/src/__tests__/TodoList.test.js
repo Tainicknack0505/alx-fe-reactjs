@@ -1,6 +1,6 @@
 // src/__tests__/TodoList.test.js
 import React from 'react';
-import { render, screen, fireEvent, waitForElementToBeRemoved } from '@testing-library/react';
+import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import TodoList from '../TodoList';
 
@@ -22,6 +22,12 @@ test('toggles a todo', () => {
   render(<TodoList />);
   fireEvent.click(screen.getByText('Learn React'));
   expect(screen.getByText('Learn React')).toHaveStyle('text-decoration: line-through');
+
+  // Click again to untoggle
+  fireEvent.click(screen.getByText('Learn React'));
+  
+  // Assert that the style is back to normal
+  expect(screen.getByText('Learn React')).toHaveStyle('text-decoration: none');
 });
 
 test('deletes a todo', async () => {
@@ -29,5 +35,8 @@ test('deletes a todo', async () => {
     const deleteButtons = screen.getAllByText('Delete');
     fireEvent.click(deleteButtons[0]); // Click the first delete button
     
-    await waitForElementToBeRemoved(() => screen.queryByText('Learn React'));
+    await waitFor(() => {
+      // Wait until the 'Learn React' item is removed from the DOM
+      expect(screen.queryByText('Learn React')).not.toBeInTheDocument();
+    });
 });
