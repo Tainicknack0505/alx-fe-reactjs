@@ -1,6 +1,6 @@
 // src/__tests__/TodoList.test.js
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import TodoList from '../TodoList';
 
@@ -24,8 +24,12 @@ test('toggles a todo', () => {
   expect(screen.getByText('Learn React')).toHaveStyle('text-decoration: line-through');
 });
 
-test('deletes a todo', () => {
-  render(<TodoList />);
-  fireEvent.click(screen.getByText('Delete', { selector: 'button' }));
-  expect(screen.queryByText('Learn React')).not.toBeInTheDocument();
+test('deletes a todo', async () => {
+    render(<TodoList />);
+    const deleteButtons = screen.getAllByText('Delete');
+    fireEvent.click(deleteButtons[0]); // Click the first delete button
+    
+    await waitFor(() => {
+      expect(screen.queryByText('Learn React')).not.toBeInTheDocument();
+    });
 });
