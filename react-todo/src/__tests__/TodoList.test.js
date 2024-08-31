@@ -18,14 +18,33 @@ test('adds a new todo', () => {
   expect(screen.getByText('New Todo')).toBeInTheDocument();
 });
 
-test('toggles a todo', () => {
+// test('toggles a todo', () => {
+//       render(<TodoList />);
+//       fireEvent.click(screen.getByText('Learn React'));
+//       expect(screen.getByText('Learn React')).toHaveStyle('text-decoration: line-through');
+    
+//       fireEvent.click(screen.getByText('Learn React'));
+      
+//       expect(screen.getByText('Learn React')).toHaveStyle('text-decoration: none');
+//     })
+
+
+// ... your other imports
+
+// ... your other imports
+
+test('toggles a todo', async () => {
   render(<TodoList />);
   fireEvent.click(screen.getByText('Learn React'));
-  expect(screen.getByText('Learn React')).toHaveStyle('text-decoration: line-through');
+
+  // Wait for the component to update after the click
+  await waitFor(() => {
+    expect(screen.getByText('Learn React')).toHaveStyle('text-decoration: line-through');
+  });
 
   // Click again to untoggle
   fireEvent.click(screen.getByText('Learn React'));
-  
+
   // Assert that the style is back to normal
   expect(screen.getByText('Learn React')).toHaveStyle('text-decoration: none');
 });
