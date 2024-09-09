@@ -3,36 +3,162 @@
     "id": 1,
     "title": "Spaghetti Carbonara",
     "summary": "A classic Italian pasta dish with eggs, cheese, bacon, and black pepper.",
-    "image": "https://images.pexels.com/photos/20352389/pexels-photo-20352389/free-photo-of-plate-of-pasta-with-egg.jpeg?auto=compress&cs=tinysrgb&w=800"
+    "image": "https://images.pexels.com/photos/20352389/pexels-photo-20352389/free-photo-of-plate-of-pasta-with-egg.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "ingredients": [
+      "200g Spaghetti",
+      "100g Pancetta or Bacon",
+      "50g Pecorino Romano cheese (or Parmesan)",
+      "2 large eggs",
+      "2 cloves garlic (optional)",
+      "Salt and black pepper to taste",
+      "Olive oil (optional)"
+    ],
+    "instructions": [
+      "1. Cook the spaghetti in salted boiling water according to the package instructions until al dente.",
+      "2. In a pan, heat a little olive oil and cook the pancetta or bacon until crispy.",
+      "3. If using garlic, add it to the pan with the pancetta and cook for 1 minute, then remove and discard the garlic.",
+      "4. In a bowl, whisk together the eggs and grated cheese.",
+      "5. Drain the spaghetti and quickly toss it in the pan with the pancetta to combine.",
+      "6. Remove the pan from the heat and quickly mix in the egg and cheese mixture to create a creamy sauce. Season with salt and pepper.",
+      "7. Serve immediately with extra cheese and black pepper if desired."
+    ]
   },
   {
     "id": 2,
     "title": "Chicken Tikka Masala",
     "summary": "Chunks of grilled chicken (tikka) cooked in a smooth buttery & creamy tomato based gravy.",
-    "image": "https://images.pexels.com/photos/27294724/pexels-photo-27294724/free-photo-of-a-bowl-of-food-with-sauce-and-vegetables-on-it.jpeg?auto=compress&cs=tinysrgb&w=800"
+    "image": "https://images.pexels.com/photos/27294724/pexels-photo-27294724/free-photo-of-a-bowl-of-food-with-sauce-and-vegetables-on-it.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "ingredients": [
+      "500g Chicken breast, cut into chunks",
+      "200g Plain yogurt",
+      "2 tbsp Tikka masala paste",
+      "1 can (400g) diced tomatoes",
+      "1 large onion, finely chopped",
+      "2 cloves garlic, minced",
+      "1 tbsp ginger, minced",
+      "2 tbsp vegetable oil",
+      "1 cup heavy cream",
+      "Salt and pepper to taste",
+      "Fresh cilantro for garnish"
+    ],
+    "instructions": [
+      "1. Marinate the chicken in yogurt and tikka masala paste for at least 1 hour.",
+      "2. Heat oil in a pan and cook the onions until soft and golden.",
+      "3. Add garlic and ginger, cooking for an additional 1 minute.",
+      "4. Add the marinated chicken and cook until browned.",
+      "5. Stir in the diced tomatoes and cook for 10 minutes.",
+      "6. Add the cream and simmer until the chicken is cooked through and the sauce is thickened.",
+      "7. Garnish with fresh cilantro and serve with rice or naan."
+    ]
   },
   {
     "id": 3,
     "title": "Beef Stroganoff",
     "summary": "A Russian dish of sautéed pieces of beef served in a sauce with smetana (sour cream).",
-    "image": "https://images.pexels.com/photos/27305335/pexels-photo-27305335/free-photo-of-a-plate-with-meat-and-vegetables-on-it.jpeg?auto=compress&cs=tinysrgb&w=800"
+    "image": "https://images.pexels.com/photos/27305335/pexels-photo-27305335/free-photo-of-a-plate-with-meat-and-vegetables-on-it.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "ingredients": [
+      "500g Beef sirloin, thinly sliced",
+      "1 large onion, finely chopped",
+      "2 cloves garlic, minced",
+      "200g mushrooms, sliced",
+      "1 cup beef broth",
+      "1 cup sour cream",
+      "2 tbsp all-purpose flour",
+      "2 tbsp vegetable oil",
+      "Salt and pepper to taste",
+      "Fresh parsley for garnish"
+    ],
+    "instructions": [
+      "1. Heat oil in a pan and sauté the onions and garlic until translucent.",
+      "2. Add the beef and cook until browned.",
+      "3. Stir in the mushrooms and cook until they release their moisture.",
+      "4. Sprinkle the flour over the mixture and cook for 1 minute.",
+      "5. Gradually add the beef broth, stirring constantly until the sauce thickens.",
+      "6. Stir in the sour cream and heat through. Do not boil.",
+      "7. Season with salt and pepper, garnish with parsley, and serve with rice or noodles."
+    ]
   },
   {
     "id": 4,
     "title": "Pad Thai",
     "summary": "A stir-fried rice noodle dish commonly served as street food in Thailand.",
-    "image": "https://images.pexels.com/photos/15797948/pexels-photo-15797948/free-photo-of-thai-street-food-stir-fried-vermicelli-with-egg-and-vegetables-on-a-white-background.jpeg?auto=compress&cs=tinysrgb&w=800"
+    "image": "https://images.pexels.com/photos/15797948/pexels-photo-15797948/free-photo-of-thai-street-food-stir-fried-vermicelli-with-egg-and-vegetables-on-a-white-background.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "ingredients": [
+      "200g Rice noodles",
+      "200g chicken or shrimp, peeled and deveined",
+      "2 eggs",
+      "2 cups bean sprouts",
+      "1 cup shredded carrots",
+      "3 green onions, chopped",
+      "3 cloves garlic, minced",
+      "3 tbsp fish sauce",
+      "2 tbsp soy sauce",
+      "2 tbsp tamarind paste",
+      "1 tbsp sugar",
+      "2 tbsp vegetable oil",
+      "Crushed peanuts and lime wedges for garnish"
+    ],
+    "instructions": [
+      "1. Cook rice noodles according to package instructions and set aside.",
+      "2. Heat oil in a pan and cook the garlic, chicken or shrimp until fully cooked.",
+      "3. Push the meat to one side of the pan and scramble the eggs on the other side.",
+      "4. Add the cooked noodles, bean sprouts, carrots, and green onions to the pan.",
+      "5. Stir in fish sauce, soy sauce, tamarind paste, and sugar. Toss everything to combine.",
+      "6. Cook for a few more minutes until everything is heated through.",
+      "7. Serve with crushed peanuts and lime wedges on the side."
+    ]
   },
   {
     "id": 5,
     "title": "Sushi",
     "summary": "A Japanese dish consisting of vinegared rice accompanied by various ingredients such as seafood, vegetables, and occasionally tropical fruits.",
-    "image": "https://images.pexels.com/photos/7245465/pexels-photo-7245465.jpeg?auto=compress&cs=tinysrgb&w=800"
+    "image": "https://images.pexels.com/photos/7245465/pexels-photo-7245465.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "ingredients": [
+      "2 cups sushi rice",
+      "2 1/2 cups water",
+      "1/2 cup rice vinegar",
+      "1/4 cup sugar",
+      "1/4 cup salt",
+      "Nori (seaweed) sheets",
+      "Fresh fish or seafood (tuna, salmon, etc.)",
+      "Vegetables (cucumber, avocado, etc.)",
+      "Soy sauce for dipping",
+      "Wasabi and pickled ginger for serving"
+    ],
+    "instructions": [
+      "1. Rinse the sushi rice under cold water until the water runs clear.",
+      "2. Cook the rice in a rice cooker or pot with the water.",
+      "3. Mix rice vinegar, sugar, and salt in a bowl until dissolved and stir into the cooked rice.",
+      "4. Let the rice cool to room temperature.",
+      "5. Lay out a sheet of nori on a bamboo sushi mat and spread an even layer of rice over it.",
+      "6. Arrange fish and vegetables in a line at one edge of the rice.",
+      "7. Roll the sushi tightly using the mat, then slice into bite-sized pieces.",
+      "8. Serve with soy sauce, wasabi, and pickled ginger."
+    ]
   },
   {
     "id": 6,
     "title": "Tacos",
     "summary": "A traditional Mexican dish consisting of a small hand-sized corn or wheat tortilla topped with a filling.",
-    "image": "https://images.pexels.com/photos/8230019/pexels-photo-8230019.jpeg?auto=compress&cs=tinysrgb&w=800"
+    "image": "https://images.pexels.com/photos/8230019/pexels-photo-8230019.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "ingredients": [
+      "8 small corn or wheat tortillas",
+      "500g ground beef or chicken",
+      "1 onion, finely chopped",
+      "2 cloves garlic, minced",
+      "1 tbsp taco seasoning",
+      "1 cup shredded lettuce",
+      "1 cup diced tomatoes",
+      "1/2 cup shredded cheese",
+      "Sour cream and salsa for serving"
+    ],
+    "instructions": [
+      "1. Heat a skillet over medium heat and cook the onions and garlic until soft.",
+      "2. Add the ground beef or chicken and cook until browned.",
+      "3. Stir in taco seasoning and cook for an additional 2 minutes.",
+      "4. Warm the tortillas in a pan or microwave.",
+      "5. Fill each tortilla with the meat mixture, then top with lettuce, tomatoes, and cheese.",
+      "6. Serve with sour cream and salsa on the side."
+    ]
   }
 ]
