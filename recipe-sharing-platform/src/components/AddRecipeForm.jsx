@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const AddRecipeForm = () => {
   const [title, setTitle] = useState("");
   const [ingredients, setIngredients] = useState("");
-  const [instructions, setInstructions] = useState("");
+  const [steps, setSteps] = useState("");
   const [errors, setErrors] = useState({});
 
   const handleSubmit = (e) => {
@@ -13,7 +13,7 @@ const AddRecipeForm = () => {
     const newErrors = {};
     if (!title) newErrors.title = "Title is required";
     if (!ingredients) newErrors.ingredients = "Ingredients are required";
-    if (!instructions) newErrors.instructions = "Instructions are required";
+    if (!steps) newErrors.instructions = "Instructions are required";
 
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
@@ -27,7 +27,7 @@ const AddRecipeForm = () => {
         .split("\n")
         .map((item) => item.trim())
         .filter((item) => item),
-      instructions: instructions
+      instructions: steps
         .split("\n")
         .map((step) => step.trim())
         .filter((step) => step),
@@ -38,7 +38,7 @@ const AddRecipeForm = () => {
     // Reset form fields
     setTitle("");
     setIngredients("");
-    setInstructions("");
+    setSteps("");
     setErrors({});
   };
 
@@ -94,13 +94,13 @@ const AddRecipeForm = () => {
             </label>
             <textarea
               id="instructions"
-              value={instructions}
-              onChange={(e) => setInstructions(e.target.value)}
+              value={steps}
+              onChange={(e) => setSteps(e.target.value)}
               rows="4"
               className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
             />
-            {errors.instructions && (
-              <p className="text-red-500 text-sm mt-1">{errors.instructions}</p>
+            {errors.steps && (
+              <p className="text-red-500 text-sm mt-1">{errors.steps}</p>
             )}
           </div>
 
