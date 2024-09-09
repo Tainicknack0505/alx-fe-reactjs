@@ -15,7 +15,7 @@ const RecipeDetail = () => {
   if (!recipe) return <div>Loading...</div>;
 
   return (
-    <div className="min-h-screen bg-gray-100 p-6">
+    <div className="w-screen min-h-screen bg-gray-100 p-6">
       <button
         onClick={() => navigate('/')}
         className="mb-4 text-blue-500 hover:underline"
