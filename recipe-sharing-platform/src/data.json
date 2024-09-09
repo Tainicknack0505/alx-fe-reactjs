@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "Spaghetti Carbonara",
+    "summary": "A classic Italian pasta dish with eggs, cheese, bacon, and black pepper.",
+    "image": "https://images.pexels.com/photos/20352389/pexels-photo-20352389/free-photo-of-plate-of-pasta-with-egg.jpeg?auto=compress&cs=tinysrgb&w=800"
+  },
+  {
+    "id": 2,
+    "title": "Chicken Tikka Masala",
+    "summary": "Chunks of grilled chicken (tikka) cooked in a smooth buttery & creamy tomato based gravy.",
+    "image": "https://images.pexels.com/photos/27294724/pexels-photo-27294724/free-photo-of-a-bowl-of-food-with-sauce-and-vegetables-on-it.jpeg?auto=compress&cs=tinysrgb&w=800"
+  },
+  {
+    "id": 3,
+    "title": "Beef Stroganoff",
+    "summary": "A Russian dish of sautéed pieces of beef served in a sauce with smetana (sour cream).",
+    "image": "https://images.pexels.com/photos/27305335/pexels-photo-27305335/free-photo-of-a-plate-with-meat-and-vegetables-on-it.jpeg?auto=compress&cs=tinysrgb&w=800"
+  },
+  {
+    "id": 4,
+    "title": "Pad Thai",
+    "summary": "A stir-fried rice noodle dish commonly served as street food in Thailand.",
+    "image": "https://images.pexels.com/photos/15797948/pexels-photo-15797948/free-photo-of-thai-street-food-stir-fried-vermicelli-with-egg-and-vegetables-on-a-white-background.jpeg?auto=compress&cs=tinysrgb&w=800"
+  },
+  {
+    "id": 5,
+    "title": "Sushi",
+    "summary": "A Japanese dish consisting of vinegared rice accompanied by various ingredients such as seafood, vegetables, and occasionally tropical fruits.",
+    "image": "https://images.pexels.com/photos/7245465/pexels-photo-7245465.jpeg?auto=compress&cs=tinysrgb&w=800"
+  },
+  {
+    "id": 6,
+    "title": "Tacos",
+    "summary": "A traditional Mexican dish consisting of a small hand-sized corn or wheat tortilla topped with a filling.",
+    "image": "https://images.pexels.com/photos/8230019/pexels-photo-8230019.jpeg?auto=compress&cs=tinysrgb&w=800"
+  }
+]
