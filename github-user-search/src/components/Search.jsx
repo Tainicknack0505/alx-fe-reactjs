@@ -1,7 +1,7 @@
 // src/components/SearchInput.jsx
 import React, { useState } from "react";
 
-const SearchInput = ({ onSearch }) => {
+const Search = ({ onSearch }) => {
   const [username, setUsername] = useState("");
 
   const handleSubmit = (e) => {
@@ -22,4 +22,4 @@ const SearchInput = ({ onSearch }) => {
   );
 };
 
-export default SearchInput;
+export default Search;
