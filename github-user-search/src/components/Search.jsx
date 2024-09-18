@@ -3,22 +3,45 @@ import React, { useState } from "react";
 
 const Search = ({ onSearch }) => {
   const [username, setUsername] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+  const [user, setUser] = useState(null);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    onSearch(username);
+    setLoading(true);
+    setError(null);
+    try {
+      const userData = await onSearch(username);
+      setUser(userData);
+    } catch (err) {
+      setError("Looks like we can't find the user");
+    }
+    setLoading(false);
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        value={username}
-        onChange={(e) => setUsername(e.target.value)}
-        placeholder="Enter GitHub username"
-      />
-      <button type="submit">Search</button>
-    </form>
+    <div>
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+          placeholder="Enter GitHub username"
+        />
+        <button type="submit">Search</button>
+      </form>
+
+      {loading && <p>Loading...</p>}
+      {error && <p>{error}</p>}
+      {user && (
+        <div>
+          <img src={user.avatar_url} alt={user.login} width="100" />
+          <h3>{user.login}</h3>
+          <a href={`https://github.com/${user.login}`}>View Profile</a>
+        </div>
+      )}
+    </div>
   );
 };
 
