@@ -15,7 +15,7 @@ const Search = ({ onSearch }) => {
       const userData = await onSearch(username);
       setUser(userData);
     } catch (err) {
-      setError("Looks like we can't find the user");
+      setError("Looks like we cant find the user");
     }
     setLoading(false);
   };
