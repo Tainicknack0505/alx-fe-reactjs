@@ -31,16 +31,16 @@ const githubApi = axios.create({
 });
 
 export const fetchUserData = async ({ username, location, minRepos }) => {
-    let query = `q=${username}`;
+    let query = `q=${username || ''}`;  // Ensure username is provided or defaults to empty string
     if (location) query += `+location:${location}`;
     if (minRepos) query += `+repos:>=${minRepos}`;
-  
+    
     try {
         const response = await githubApi.get(`/search/users?${query}`);
         if (response.data.items.length === 0) {
             throw new Error("User not found");
         }
-        return response.data.items[0]; // Assuming you want the first result
+        return response.data.items; // Returns all users matching the query
     } catch (error) {
         throw new Error(error.response?.data?.message || "An error occurred");
     }
