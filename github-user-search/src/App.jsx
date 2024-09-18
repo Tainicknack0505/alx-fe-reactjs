@@ -1,5 +1,5 @@
 import React from "react";
-import SearchInput from "./components/SearchInput";
+import SearchInput from "./components/Search";
 import { fetchUserData } from "./services/githubService";
 
 // const App = () => {
