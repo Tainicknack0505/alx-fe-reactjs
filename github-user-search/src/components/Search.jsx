@@ -1,16 +1,7 @@
 // src/components/SearchInput.jsx
 import React, { useState } from "react";
 
-// Define the fetchUserData function
-const fetchUserData = async (username) => {
-  const response = await fetch(`https://api.github.com/users/${username}`);
-  if (!response.ok) {
-    throw new Error("User not found");
-  }
-  return response.json();
-};
-
-const Search = () => {
+const Search = ({ onSearch }) => {
   const [username, setUsername] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -21,10 +12,10 @@ const Search = () => {
     setLoading(true);
     setError(null);
     try {
-      const userData = await fetchUserData(username);
+      const userData = await onSearch(username);
       setUser(userData);
     } catch (err) {
-      setError("Looks like we can't find the user");
+      setError("Looks like we cant find the user");
     }
     setLoading(false);
   };
