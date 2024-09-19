@@ -143,52 +143,44 @@
 //
 
 import React, { useState } from "react";
-import "tailwindcss/tailwind.css";
+import Search from "./components/Search";
+import { fetchUserData } from "./services/githubService";
 
-const Search = ({ onSearch }) => {
-  // Accept onSearch as a prop
-  const [username, setUsername] = useState("");
-  const [location, setLocation] = useState("");
-  const [minRepos, setMinRepos] = useState("");
+const App = () => {
+  const [userData, setUserData] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    onSearch(username); // Use the onSearch function passed as a prop
+  const handleSearch = async (username) => {
+    setLoading(true);
+    setError(null);
+    try {
+      const response = await fetchUserData(username);
+      setUserData(response.data);
+    } catch (err) {
+      setError("Looks like we can't find the user");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
-    <div className="max-w-md mx-auto p-4">
-      <form onSubmit={handleSubmit} className="space-y-4">
-        <input
-          type="text"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-          placeholder="Enter GitHub username"
-          className="w-full p-2 border border-gray-300 rounded"
-        />
-        <input
-          type="text"
-          value={location}
-          onChange={(e) => setLocation(e.target.value)}
-          placeholder="Enter location"
-          className="w-full p-2 border border-gray-300 rounded"
-        />
-        <input
-          type="number"
-          value={minRepos}
-          onChange={(e) => setMinRepos(e.target.value)}
-          placeholder="Minimum repositories"
-          className="w-full p-2 border border-gray-300 rounded"
-        />
-        <button
-          type="submit"
-          className="w-full p-2 bg-blue-500 text-white rounded"
-        >
-          Search
-        </button>
-      </form>
+    <div>
+      <h1>GitHub User Search</h1>
+      <Search onSearch={handleSearch} /> {/* Pass handleSearch as a prop */}
+      {loading && <p>Loading...</p>}
+      {error && <p>{error}</p>}
+      {userData && (
+        <div>
+          <img src={userData.avatar_url} alt={userData.login} width="100" />
+          <p>{userData.name}</p>
+          <a href={userData.html_url} target="_blank" rel="noopener noreferrer">
+            View Profile
+          </a>
+        </div>
+      )}
     </div>
   );
 };
 
-export default Search;
+export default App;
